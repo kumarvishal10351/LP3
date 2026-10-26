@@ -19,12 +19,30 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28486282871053484');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28486282871053484&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
 
   <!-- ======================================================================
-       1. TIMER SCREEN (1.5-SECOND COUNTDOWN)
-       Displays photo, bold heading, 1.5s countdown, and disclaimer.
+       1. TIMER SCREEN (10-SECOND COUNTDOWN)
+       Displays photo, bold heading, 10s countdown, and disclaimer.
        ====================================================================== -->
   <div id="timerScreen" class="timer-screen" role="status" aria-live="polite">
     <div class="timer-card" id="timerCard">
@@ -48,10 +66,10 @@
 
       <!-- Countdown Box -->
       <div class="timer-countdown-box">
-        <span id="countdownNumber" class="countdown-digit">1</span>
+        <span id="countdownNumber" class="countdown-digit">10</span>
       </div>
 
-      <p class="timer-subtext">Opening page in <span id="timerSecondsText">1.5</span> seconds...</p>
+      <p class="timer-subtext">Opening page in <span id="timerSecondsText">10</span> seconds...</p>
 
       <div class="timer-progress-track">
         <div id="timerProgressBar" class="timer-progress-fill"></div>
@@ -132,14 +150,14 @@
 
   <!-- ======================================================================
        AUTOMATION SCRIPT:
-       1. 1.5-second countdown timer
+       1. 10-second countdown timer
        2. Robust audio unlock & unmuted video playback
        3. Fullscreen video covering entire screen
        4. Auto-redirect on video completion to Telegram link
        5. Direct navigation on JOIN CHANNEL button
        ====================================================================== -->
   <script>
-    const COUNTDOWN_SECONDS = 1.5;
+    const COUNTDOWN_SECONDS = 10;
     const TELEGRAM_URL = 'https://t.me/+j0tN3TN3jj01ZjBl';
 
     (function() {
@@ -274,7 +292,7 @@
         });
       }
 
-      // Start circular SVG ring and progress bar animations for 1.5 seconds
+      // Start circular SVG ring and progress bar animations for 10 seconds
       requestAnimationFrame(function() {
         if (timerProgressBar) {
           timerProgressBar.style.transition = 'width ' + COUNTDOWN_SECONDS + 's linear';
@@ -287,7 +305,7 @@
         }
       });
 
-      // 1.5-second countdown logic
+      // 10-second countdown logic
       const startTime = Date.now();
       const durationMs = COUNTDOWN_SECONDS * 1000;
 
