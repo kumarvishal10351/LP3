@@ -2,7 +2,7 @@
    Telegram Channel Landing Page Stylesheet
    - Minimal, lightweight, zero-dependency CSS
    - High-fidelity match to Telegram channel preview
-   - 10-second countdown screen before video reveal
+   - 2-second countdown screen before video reveal
    - Fullscreen vertical video covering the entire screen
    - Continuous audio playback with sound enabled
    - Continuous popping CTA button overlaid on video
@@ -67,7 +67,7 @@ body {
 }
 
 /* ==========================================================================
-   1. Timer / Countdown Screen (Initial 10-Second Screen)
+   1. Timer / Countdown Screen (Initial 2-Second Screen)
    ========================================================================== */
 .timer-screen {
   position: fixed;

@@ -41,8 +41,8 @@
 <body>
 
   <!-- ======================================================================
-       1. TIMER SCREEN (10-SECOND COUNTDOWN)
-       Displays photo, bold heading, 10s countdown, and disclaimer.
+       1. TIMER SCREEN (2-SECOND COUNTDOWN)
+       Displays photo, bold heading, 2s countdown, and disclaimer.
        ====================================================================== -->
   <div id="timerScreen" class="timer-screen" role="status" aria-live="polite">
     <div class="timer-card" id="timerCard">
@@ -66,10 +66,10 @@
 
       <!-- Countdown Box -->
       <div class="timer-countdown-box">
-        <span id="countdownNumber" class="countdown-digit">10</span>
+        <span id="countdownNumber" class="countdown-digit">2</span>
       </div>
 
-      <p class="timer-subtext">Opening page in <span id="timerSecondsText">10</span> seconds...</p>
+      <p class="timer-subtext">Opening page in <span id="timerSecondsText">2</span> seconds...</p>
 
       <div class="timer-progress-track">
         <div id="timerProgressBar" class="timer-progress-fill"></div>
@@ -150,14 +150,14 @@
 
   <!-- ======================================================================
        AUTOMATION SCRIPT:
-       1. 10-second countdown timer
+       1. 2-second countdown timer
        2. Robust audio unlock & unmuted video playback
        3. Fullscreen video covering entire screen
        4. Auto-redirect on video completion to Telegram link
        5. Direct navigation on JOIN CHANNEL button
        ====================================================================== -->
   <script>
-    const COUNTDOWN_SECONDS = 10;
+    const COUNTDOWN_SECONDS = 2;
     const TELEGRAM_URL = 'https://t.me/+j0tN3TN3jj01ZjBl';
 
     (function() {
@@ -292,7 +292,7 @@
         });
       }
 
-      // Start circular SVG ring and progress bar animations for 10 seconds
+      // Start circular SVG ring and progress bar animations for 2 seconds
       requestAnimationFrame(function() {
         if (timerProgressBar) {
           timerProgressBar.style.transition = 'width ' + COUNTDOWN_SECONDS + 's linear';
@@ -305,7 +305,7 @@
         }
       });
 
-      // 10-second countdown logic
+      // 2-second countdown logic
       const startTime = Date.now();
       const durationMs = COUNTDOWN_SECONDS * 1000;
 
